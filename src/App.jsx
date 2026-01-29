@@ -1,21 +1,26 @@
-import Navbar from "./components/Navbar";
-import Hero from "./components/hero.jsx";
-import FeatureCard from "./components/FeatureCard.jsx";
-import FeatureSection from "./components/FeatureSection.jsx";
+import { Routes, Route } from "react-router-dom";
+import MainLayout from "./layouts/MainLayout.jsx";
+import AuthLayout from "./layouts/AuthLayout.jsx";
+import Home from "./pages/Home.jsx";
+import Login from "./pages/Login.jsx";
 import PricingCard from "./components/PricingCard.jsx";
 import PricingSection from "./components/PricingSection.jsx";
-import Footer from "./components/footer.jsx";
+
 function App() {
   return (
-    <>
-      <Navbar />
-      <main className="pt-20">
-        <Hero />
-        <FeatureSection />
-        <PricingSection />
-        <Footer />
-      </main>
-    </>
+    <Routes>
+      {/* Auth routes */}
+      <Route element={<AuthLayout />}>
+        <Route path="/login" element={<Login />} />
+      </Route>
+
+      {/* Main app routes */}
+      <Route element={<MainLayout />}>
+        <Route path="/" element={<Home />} />
+        <Route path="/pricingcard" element={<PricingCard />} />
+        <Route path="/pricingsection" element={<PricingSection />} />
+      </Route>
+    </Routes>
   );
 }
 
