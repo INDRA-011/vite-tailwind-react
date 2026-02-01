@@ -17,8 +17,6 @@ function App() {
       {/* Main app routes */}
       <Route element={<MainLayout />}>
         <Route path="/" element={<Home />} />
-        <Route path="/pricingcard" element={<PricingCard />} />
-        <Route path="/pricingsection" element={<PricingSection />} />
       </Route>
     </Routes>
   );

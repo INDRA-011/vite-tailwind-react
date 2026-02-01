@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <nav className="fixed top-0 z-50 w-full px-6 md:px-16 lg:px-24 xl:px-32 py-4 backdrop-blur flex items-center justify-between">
@@ -25,9 +26,16 @@ const Navbar = () => {
       </div>
 
       <div className="flex items-center gap-4 md:gap-6">
-        <button className="hidden md:block px-4 py-2 border border-purple-600 rounded-md hover:bg-slate-100">
-          Sign in
-        </button>
+        <Link to="/login">
+          <button className="hidden md:block px-4 py-2 border border-purple-600 rounded-md hover:bg-slate-100">
+            Login
+          </button>
+        </Link>
+        <Link to="/login">
+          <button className="hidden md:block px-4 py-2 border border-purple-600 rounded-md hover:bg-slate-100">
+            Sign in
+          </button>
+        </Link>
         <button className="hidden md:block px-4 py-2 bg-purple-600 text-white rounded-md hover:bg-purple-700">
           Get started
         </button>

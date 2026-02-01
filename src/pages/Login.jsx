@@ -1,4 +1,4 @@
-import { Formik, Form, Field, ErrorMessage } from "formik";
+import { Formik, Form, Field } from "formik";
 import { loginSchema } from "../validation/LoginSchema.js";
 
 const Login = () => {
@@ -12,7 +12,6 @@ const Login = () => {
 
     // fake auth
     localStorage.setItem("isAuth", "true");
-
     window.location.href = "/";
   };
 
@@ -38,14 +37,9 @@ const Login = () => {
                   className={`w-full px-3 py-2 border rounded-lg focus:outline-none
                     ${
                       touched.email && errors.email
-                        ? "border-red-500"
-                        : "border-gray-300"
+                        ? "border-red-500 focus:ring-1 focus:ring-red-500"
+                        : "border-gray-300 focus:ring-1 focus:ring-blue-500"
                     }`}
-                />
-                <ErrorMessage
-                  name="email"
-                  component="p"
-                  className="text-red-500 text-sm mt-1"
                 />
               </div>
 
@@ -61,14 +55,9 @@ const Login = () => {
                   className={`w-full px-3 py-2 border rounded-lg focus:outline-none
                     ${
                       touched.password && errors.password
-                        ? "border-red-500"
-                        : "border-gray-300"
+                        ? "border-red-500 focus:ring-1 focus:ring-red-500"
+                        : "border-gray-300 focus:ring-1 focus:ring-blue-500"
                     }`}
-                />
-                <ErrorMessage
-                  name="password"
-                  component="p"
-                  className="text-red-500 text-sm mt-1"
                 />
               </div>
 
