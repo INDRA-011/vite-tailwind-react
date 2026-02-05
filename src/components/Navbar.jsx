@@ -31,14 +31,11 @@ const Navbar = () => {
             Login
           </button>
         </Link>
-        <Link to="/login">
-          <button className="hidden md:block px-4 py-2 border border-purple-600 rounded-md hover:bg-slate-100">
-            Sign in
+        <Link to="/signup">
+          <button className="hidden md:block px-4 py-2 bg-purple-600 text-white rounded-md hover:bg-purple-700">
+            Get started
           </button>
         </Link>
-        <button className="hidden md:block px-4 py-2 bg-purple-600 text-white rounded-md hover:bg-purple-700">
-          Get started
-        </button>
       </div>
     </nav>
   );

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 const Hero = () => {
   return (
     <section className="flex flex-col items-center text-center px-4 pt-32 bg-[url('/assets/light-hero-gradient.svg')] bg-no-repeat bg-cover">
@@ -39,9 +40,11 @@ const Hero = () => {
 
       {/* Buttons */}
       <div className="flex gap-4 mt-8">
-        <button className="px-6 h-11 bg-purple-600 text-white rounded-md hover:bg-purple-700">
-          Get started
-        </button>
+        <Link to="/signup">
+          <button className="px-6 h-11 bg-purple-600 text-white rounded-md hover:bg-purple-700">
+            Get started
+          </button>
+        </Link>
         <button className="px-6 h-11 border border-purple-900 rounded-md text-slate-700">
           Watch demo
         </button>

@@ -1,20 +1,23 @@
 import FeatureCard from "./FeatureCard";
+import { FaMobile } from "react-icons/fa";
+import { MdElectricBolt } from "react-icons/md";
+import { VscSettings } from "react-icons/vsc";
 
 const FEATURES = [
   {
     title: "Fast Development",
     description: "Build interfaces quickly using reusable Tailwind components.",
-    icon: "⚡",
+    icon: <MdElectricBolt/>,
   },
   {
     title: "Responsive Design",
     description: "Looks great on mobile, tablet, and desktop by default.",
-    icon: "📱",
+    icon: <FaMobile/>,
   },
   {
     title: "Customizable",
     description: "Easily tweak styles without leaving your JSX.",
-    icon: "🎨",
+    icon: <VscSettings/>,
   },
 ];
 

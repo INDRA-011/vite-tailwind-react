@@ -1,14 +1,5 @@
-import Header from "../../components/header.jsx";
-import Footer from "../../components/footer.jsx";
-
 const AppLayout = ({ children }) => {
-  return (
-    <>
-      <Header />
-      <main className="pt-24 px-6">{children}</main>
-      <Footer />
-    </>
-  );
+  return <div>{children}</div>;
 };
 
 export default AppLayout;
